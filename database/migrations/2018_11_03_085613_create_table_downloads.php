@@ -17,7 +17,7 @@ class CreateTableDownloads extends Migration
             $table->increments('id');
             $table->string('url', 5000);
             $table->tinyInteger('status');
-            $table->string('storage_path');
+            $table->string('storage_path')->default('');
             $table->timestamps();
         });
     }

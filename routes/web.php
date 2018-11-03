@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hello there!';
 });
+
+Route::resource('downloads', 'DownloadController')->only(['index', 'create', 'store']);
